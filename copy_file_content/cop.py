@@ -10,12 +10,12 @@ file_path = None
 
 """
 ex) > ./cop.py ./example.txt
-file_path = ['./cop.py', './example.txt']
+sys.argv = ['./cop.py', './example.txt']
 """
 
 # no argument
 if len(sys.argv) == 1:
-    print("Usage: cop <filepath>")
+    print("Usage: cop <file>")
     exit()
 else:
     # check the file extention
@@ -39,19 +39,16 @@ def get_file_content():
     """
     file = open(file_path)
     content_arr = file.readlines()
+    file.close()
 
     result = ""
     for line in content_arr:
         result += line
-
-    file.close()
-
+        
     if result.endswith("\n"):
         result = result[:-1]
     return result
 
-res = str(get_file_content())
-
-cb.copy(res)
+cb.copy(str(get_file_content()))
 
 print(f"{file_path} copied!")
