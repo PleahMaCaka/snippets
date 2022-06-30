@@ -5,4 +5,3 @@
 | Soon                                     | Soon              | Soon    |
 
 코드 스니펫이라고 하기 애매한 짧은 스크립트 또한 업로드 됩니다.  
-*Short scripts that are vague to be called Snippets are also uploaded*
